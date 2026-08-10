@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Un Sopanha — Computer Science Student & Web Developer based in Phnom Penh, Cambodia. Specializing in Web Design, HTML/CSS/JS, IT Networking, and Digital Content.">
+  <meta name="author" content="Un Sopanha">
+  <title>Un Sopanha — Web Developer & CS Student</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-dark">
+
+  <!-- Canvas Background for Particle Matrix / Ambient Glow -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        <span class="status-indicator" title="Available for opportunities"></span>
+        <span class="nav-logo-text">Sopanha<span class="text-accent">.dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="tab">About</a>
+        <a href="#education" class="tab">Education</a>
+        <a href="#skills" class="tab">Skills</a>
+        <a href="#work" class="tab">Work</a>
+        <a href="#contact" class="tab">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" onclick="toggleTheme()" class="icon-btn" aria-label="Toggle Light/Dark Theme"
+          title="Toggle Theme">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+        <a href="CV_Un_Sopanha.pdf" download="CV_Un_Sopanha.pdf" class="btn btn-primary btn-sm">
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          CV PDF
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="badge-status">
+          <span class="badge-dot"></span>
+          <span>Open for Freelance & Web Opportunities</span>
+        </div>
+        <p class="eyebrow">// Hello World, I'm</p>
+        <h1 class="hero-title">UN SOPANHA</h1>
+
+        <p class="hero-role">
+          <span class="role-static">Specializing in </span>
+          <span class="role-typed" id="typedRole"></span>
+          <span class="cursor-blink">|</span>
+        </p>
+
+        <p class="hero-desc">
+          Computer Science student at <strong>Western University</strong> based in Phnom Penh, Cambodia.
+          Dedicated to crafting modern, responsive web interfaces, robust networking solutions, and engaging digital
+          media.
+        </p>
+
+        <div class="hero-pills">
+          <span class="pill">📍 Phnom Penh, KH</span>
+          <span class="pill">🎓 Western University — Year 4 CS</span>
+          <span class="pill">🌐 Khmer (Native) / English (L11C)</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">
+            <span>view_work()</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span>get_in_touch()</span>
+          </a>
+          <a href="CV_Un_Sopanha.pdf" download="CV_Un_Sopanha.pdf" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Photo Showcase Component -->
+      <div class="hero-photo-container">
+        <div class="hero-photo-card card-glass">
+          <div class="photo-card-bar">
+            <div class="window-controls">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="photo-card-title">sopanha_profile.jpg</span>
+            <span class="photo-card-tag">ONLINE</span>
+          </div>
+
+          <div class="photo-wrapper">
+            <img src="sopanha.jpg" alt="Un Sopanha — Web Developer" class="hero-img">
+            <div class="photo-gradient-overlay"></div>
+
+            <!-- Floating Decoration Badges -->
+            <div class="float-badge float-top-right card-glass">
+              <span class="badge-dot"></span>
+              <span>Available for Hire</span>
+            </div>
+
+            <div class="float-badge float-bottom-left card-glass">
+              <span class="float-icon">🎓</span>
+              <div class="float-text">
+                <span class="float-title">Western University</span>
+                <span class="float-sub">Year 3/4 CS Student</span>
+              </div>
+            </div>
+
+            <div class="float-badge float-bottom-right card-glass">
+              <span class="float-icon">⚡</span>
+              <div class="float-text">
+                <span class="float-title">Web Developer</span>
+                <span class="float-sub">Full-Stack &amp; Networking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span class="mouse-icon"><span class="wheel"></span></span>
+      <span>scroll_down</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">01 / ABOUT ME</p>
+        <h2 class="section-title">Clean design, structured code & continuous growth.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="lead-text">
+            Hi, I'm <strong>Un Sopanha</strong> — a Cambodian Computer Science student and Web Developer focused on
+            building functional, elegant, and responsive user experiences.
+          </p>
+          <p>
+            Currently pursuing my Bachelor's Degree in Computer Science at <strong>Western University</strong>, I
+            combine technical software fundamentals with practical web design and digital media skills. From crafting
+            intuitive front-end layouts to handling network configurations and digital page management, I enjoy solving
+            problems end-to-end.
+          </p>
+          <p>
+            I am an active researcher of emerging web technologies, high-performance web standards, and modern UI design
+            trends.
+          </p>
+
+          <div class="stat-row">
+            <div class="stat-card">
+              <span class="stat-num">Year 3+</span>
+              <span class="stat-label">Computer Science Student</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Web & Digital Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Dedicated & Orderly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-file">
+          <div class="file-card">
+            <div class="file-card-bar">
+              <span class="file-icon">📄</span>
+              <span class="file-name">sopanha_profile.md</span>
+            </div>
+            <div class="file-card-body">
+              <p><span class="md-h">## Personal Details</span></p>
+              <ul class="md-list">
+                <li><strong>Full Name:</strong> Un Sopanha</li>
+                <li><strong>Date of Birth:</strong> June 22, 2005</li>
+                <li><strong>Place of Birth:</strong> Kompong Cham, Cambodia</li>
+                <li><strong>Address:</strong> Sen Sok, Phnom Penh</li>
+                <li><strong>Nationality:</strong> Cambodian</li>
+              </ul>
+
+              <p><span class="md-h">## Languages</span></p>
+              <ul class="md-list">
+                <li><strong>Khmer:</strong> Native / Mother tongue</li>
+                <li><strong>English:</strong> Advanced (Grade 12)</li>
+              </ul>
+
+              <p><span class="md-h">## Personal Interests</span></p>
+              <div class="habits-tags">
+                <span class="tag tag-kw">🔬 Tech Research</span>
+                <span class="tag tag-fn">⚽ Sports & Fitness</span>
+                <span class="tag tag-str">🎵 Music</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION & EXPERIENCE SECTION ===== -->
+  <section class="section section-alt" id="education">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">02 / ACADEMICS & JOURNEY</p>
+        <h2 class="section-title">Education & Qualifications</h2>
+        <p class="section-sub">My academic background, technical training, and practical experience.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content card-glass">
+            <div class="timeline-header">
+              <span class="timeline-badge">Present</span>
+              <span class="timeline-location">Phnom Penh, Cambodia</span>
+            </div>
+            <h3 class="timeline-title">Western University</h3>
+            <h4 class="timeline-subtitle">Bachelor's Degree of Computer Science</h4>
+            <p class="timeline-desc">
+              Currently pursuing a B.S. in Computer Science. Coursework includes Software Engineering, Web Technologies,
+              Database Systems, Computer Architecture, Data Structures, and Object-Oriented Programming.
+            </p>
+            <div class="tag-list">
+              <span class="tag tag-fn">Computer Science</span>
+              <span class="tag tag-kw">Software Engineering</span>
+              <span class="tag tag-str">Database Management</span>
+              <span class="tag tag-num">Web Development</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content card-glass">
+            <div class="timeline-header">
+              <span class="timeline-badge">2023 – 2024</span>
+              <span class="timeline-location">Phnom Penh, Cambodia</span>
+            </div>
+            <h3 class="timeline-title">ETEC CENTER</h3>
+            <h4 class="timeline-subtitle">Fundamentals of Programming & Networking</h4>
+            <p class="timeline-desc">
+              Completed specialized technical training in core programming logic, computer networking architectures,
+              system hardware/software troubleshooting, and advanced MS Office Applications.
+            </p>
+            <div class="tag-list">
+              <span class="tag tag-kw">Networking Fundamentals</span>
+              <span class="tag tag-fn">C/C++ Programming</span>
+              <span class="tag tag-str">MS Office Suite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content card-glass">
+            <div class="timeline-header">
+              <span class="timeline-badge">Experience</span>
+              <span class="timeline-location">Digital Marketing & Content</span>
+            </div>
+            <h3 class="timeline-title">Social Media & Digital Content Management</h3>
+            <h4 class="timeline-subtitle">Page Manager & Digital Specialist</h4>
+            <p class="timeline-desc">
+              Managed Facebook Pages and social accounts. Conducted audience content research, graphic design via
+              Photoshop & Canva, video editing with CapCut, and targeted Facebook advertising/boosting strategies.
+            </p>
+            <div class="tag-list">
+              <span class="tag tag-num">Social Media Strategy</span>
+              <span class="tag tag-fn">Photoshop / Canva</span>
+              <span class="tag tag-kw">Page Boosting & Ads</span>
+              <span class="tag tag-str">CapCut</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content card-glass">
+            <div class="timeline-header">
+              <span class="timeline-badge">2021 – 2023</span>
+              <span class="timeline-location">Sovannaphumi School</span>
+            </div>
+            <h3 class="timeline-title">General English Program</h3>
+            <h4 class="timeline-subtitle">Grade 11 English Proficiency</h4>
+            <p class="timeline-desc">
+              Graduated with advanced proficiency in English speaking, academic writing, reading comprehension, and
+              professional technical documentation.
+            </p>
+            <div class="tag-list">
+              <span class="tag tag-str">English Communication</span>
+              <span class="tag tag-fn">Technical Writing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-content card-glass">
+            <div class="timeline-header">
+              <span class="timeline-badge">2021 – 2023</span>
+              <span class="timeline-location">Hun Sen Borey 100 Khnang High School</span>
+            </div>
+            <h3 class="timeline-title">High School Graduation</h3>
+            <h4 class="timeline-subtitle">High School Diploma</h4>
+            <p class="timeline-desc">
+              Graduated successfully with strong foundation in mathematics, physics, and general science.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section" id="skills">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">03 / TECH TOOLBOX</p>
+        <h2 class="section-title">Skills & Capabilities</h2>
+        <p class="section-sub">Technologies, tools, and digital platforms I work with.</p>
+      </div>
+
+      <!-- Skill Category Tabs -->
+      <div class="skills-filter" id="skillsFilter">
+        <button class="filter-btn active" data-skill-cat="all">All Skills</button>
+        <button class="filter-btn" data-skill-cat="web">Web & Frontend</button>
+        <button class="filter-btn" data-skill-cat="programming">Programming & IT</button>
+        <button class="filter-btn" data-skill-cat="media">Design & Media</button>
+        <button class="filter-btn" data-skill-cat="digital">Office & Marketing</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+
+        <!-- Web & Frontend -->
+        <div class="skill-card card-glass" data-cat="web">
+          <div class="skill-icon">🌐</div>
+          <h3>HTML5 & CSS3</h3>
+          <p>Semantic markup, modern layout techniques (Flexbox & CSS Grid), CSS animations, custom design systems.</p>
+          <div class="skill-level"><span style="width: 90%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="web">
+          <div class="skill-icon">⚡</div>
+          <h3>JavaScript (ES6+)</h3>
+          <p>DOM manipulation, asynchronous fetch APIs, event handling, dynamic UI components, vanilla JS applications.
+          </p>
+          <div class="skill-level"><span style="width: 82%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="web">
+          <div class="skill-icon">🎨</div>
+          <h3>Web & Responsive UI Design</h3>
+          <p>Mobile-first responsive design, glassmorphism aesthetics, color theory, typography, component styling.</p>
+          <div class="skill-level"><span style="width: 88%;"></span></div>
+        </div>
+
+        <!-- Programming & IT -->
+        <div class="skill-card card-glass" data-cat="programming">
+          <div class="skill-icon">💻</div>
+          <h3>Programming Fundamentals</h3>
+          <p>Object-Oriented Programming (OOP) concepts, data structures, algorithm logic in C/C++/Java.</p>
+          <div class="skill-level"><span style="width: 80%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="programming">
+          <div class="skill-icon">🔌</div>
+          <h3>Networking & IT Setup</h3>
+          <p>TCP/IP fundamentals, LAN/WAN basics, router/switch configuration, computer hardware assembly &
+            troubleshooting.</p>
+          <div class="skill-level"><span style="width: 84%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="programming">
+          <div class="skill-icon">🐙</div>
+          <h3>Git & Version Control</h3>
+          <p>Source code control using Git, repository management on GitHub (`github.com/SixC6C`), commit workflows.</p>
+          <div class="skill-level"><span style="width: 78%;"></span></div>
+        </div>
+
+        <!-- Design & Media -->
+        <div class="skill-card card-glass" data-cat="media">
+          <div class="skill-icon">🖼️</div>
+          <h3>Adobe Photoshop</h3>
+          <p>Image editing, banner creation, background removal, photo retouching, graphic design assets for web &
+            social media.</p>
+          <div class="skill-level"><span style="width: 85%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="media">
+          <div class="skill-icon">🎬</div>
+          <h3>CapCut Video Editing</h3>
+          <p>Short-form video editing, visual transitions, audio syncing, subtitle alignment, engaging promo content.
+          </p>
+          <div class="skill-level"><span style="width: 86%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="media">
+          <div class="skill-icon">✨</div>
+          <h3>Canva Design</h3>
+          <p>Rapid graphic design prototyping, social media posters, infographics, presentation slides, brand templates.
+          </p>
+          <div class="skill-level"><span style="width: 92%;"></span></div>
+        </div>
+
+        <!-- Office & Marketing -->
+        <div class="skill-card card-glass" data-cat="digital">
+          <div class="skill-icon">📊</div>
+          <h3>Social Media Management</h3>
+          <p>Facebook Page management, targeted audience boosting, post scheduling, page reach optimization, community
+            engagement.</p>
+          <div class="skill-level"><span style="width: 88%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="digital">
+          <div class="skill-icon">📄</div>
+          <h3>MS Office Suite</h3>
+          <p>Word document formatting, Excel data analysis & formulas, PowerPoint presentation design, Outlook
+            communication.</p>
+          <div class="skill-level"><span style="width: 94%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass" data-cat="digital">
+          <div class="skill-icon">💬</div>
+          <h3>Technical English & Khmer</h3>
+          <p>Bilingual communication in Khmer (Native) and English (Advanced L10C) for technical docs and client
+            discussion.</p>
+          <div class="skill-level"><span style="width: 90%;"></span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK / PROJECTS SECTION ===== -->
+  <section class="section section-alt" id="work">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">04 / SELECTED WORK</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">A showcase of web applications, UI designs, and digital tools I've built.</p>
+      </div>
+
+      <!-- Project Category Filters -->
+      <div class="project-filter" id="projectFilter">
+        <button class="p-filter-btn active" data-filter="all">All Projects</button>
+        <button class="p-filter-btn" data-filter="web">Web Apps</button>
+        <button class="p-filter-btn" data-filter="ui">UI/UX Design</button>
+        <button class="p-filter-btn" data-filter="tools">Digital Tools</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+
+        <!-- Project 1: Valorant Masterpiece Collection -->
+        <article class="project-card card-glass" data-project-cat="web">
+          <div class="project-preview preview-gradient-2">
+            <div class="preview-mockup">
+              <div class="mockup-header">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="mockup-title">localhost/project_valorant</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-hero-text">VALORANT Showcase</div>
+                <div class="mockup-tags"><span>PHP</span><span>CSS3</span><span>JS</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-bar">
+              <span class="project-file">project_valorant/mainpage.php</span>
+              <span class="project-badge">Web App</span>
+            </div>
+            <h3>Valorant Masterpiece Collection</h3>
+            <p>A custom gaming web showcase application with custom gold/sapphire UI theme, dynamic cart interaction,
+              interactive contact handler, and responsive glassmorphism navbar.</p>
+            <ul class="tag-list">
+              <li class="tag tag-fn">PHP</li>
+              <li class="tag tag-kw">JavaScript</li>
+              <li class="tag tag-str">CSS3 Glassmorphism</li>
+            </ul>
+            <div class="project-links">
+              <button class="btn-link open-modal-btn" data-project-id="p1">Details &amp; Tech Stack →</button>
+              <a href="https://github.com/SixC6C" target="_blank" rel="noopener" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Laravel Food Ordering Platform -->
+        <article class="project-card card-glass" data-project-cat="web">
+          <div class="project-preview preview-gradient-1">
+            <div class="preview-mockup">
+              <div class="mockup-header">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="mockup-title">localhost/order-food-main</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-hero-text">Food Ordering Platform</div>
+                <div class="mockup-tags"><span>Laravel</span><span>Vite</span><span>MySQL</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-bar">
+              <span class="project-file">order-food-main/app</span>
+              <span class="project-badge">Full-Stack App</span>
+            </div>
+            <h3>Laravel Food Ordering System</h3>
+            <p>Full-stack food ordering platform built on Laravel MVC framework with database migrations, Vite asset
+              compilation, menu routing, and automated order processing.</p>
+            <ul class="tag-list">
+              <li class="tag tag-kw">PHP / Laravel</li>
+              <li class="tag tag-fn">Vite / JS</li>
+              <li class="tag tag-str">MySQL Database</li>
+            </ul>
+            <div class="project-links">
+              <button class="btn-link open-modal-btn" data-project-id="p2">Details &amp; Tech Stack →</button>
+              <a href="https://github.com/SixC6C" target="_blank" rel="noopener" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Loan & Borrower Management System (LMS) -->
+        <article class="project-card card-glass" data-project-cat="tools">
+          <div class="project-preview preview-gradient-3">
+            <div class="preview-mockup">
+              <div class="mockup-header">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="mockup-title">localhost/LMS</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-hero-text">Loan &amp; Borrower LMS</div>
+                <div class="mockup-tags"><span>PHP</span><span>MySQL</span><span>Session Auth</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-bar">
+              <span class="project-file">LMS/loan.php</span>
+              <span class="project-badge">Enterprise Tool</span>
+            </div>
+            <h3>Loan &amp; Borrower Management System</h3>
+            <p>Comprehensive database management application for tracking borrower profiles, calculating loan plans
+              &amp; interest types, recording payments, and managing admin sessions.</p>
+            <ul class="tag-list">
+              <li class="tag tag-fn">PHP</li>
+              <li class="tag tag-str">MySQL Relational DB</li>
+              <li class="tag tag-num">CRUD System</li>
+            </ul>
+            <div class="project-links">
+              <button class="btn-link open-modal-btn" data-project-id="p3">Details &amp; Tech Stack →</button>
+              <a href="https://github.com/SixC6C" target="_blank" rel="noopener" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Human Resource Management (HRM) System -->
+        <article class="project-card card-glass" data-project-cat="ui">
+          <div class="project-preview preview-gradient-4">
+            <div class="preview-mockup">
+              <div class="mockup-header">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="mockup-title">localhost/hrm</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-hero-text">HRM Management</div>
+                <div class="mockup-tags"><span>PHP</span><span>Web Interface</span><span>Admin</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-bar">
+              <span class="project-file">hrm/index.php</span>
+              <span class="project-badge">Management UI</span>
+            </div>
+            <h3>Human Resource Management (HRM) System</h3>
+            <p>Enterprise web portal for managing staff databases, department structures, employee status tracking, and
+              administrative access controls.</p>
+            <ul class="tag-list">
+              <li class="tag tag-kw">PHP / Web</li>
+              <li class="tag tag-fn">Database Design</li>
+              <li class="tag tag-num">Admin Portal</li>
+            </ul>
+            <div class="project-links">
+              <button class="btn-link open-modal-btn" data-project-id="p4">Details &amp; Tech Stack →</button>
+              <a href="https://github.com/SixC6C" target="_blank" rel="noopener" class="link-arrow">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERACTIVE TERMINAL SECTION ===== -->
+  <section class="section" id="interactive-cli">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">COMMAND LINE INTERFACE</p>
+        <h2 class="section-title">Interactive Terminal</h2>
+        <p class="section-sub">Type commands to inspect my background, skills, or trigger special actions directly.</p>
+      </div>
+
+      <div class="terminal-full card-glass">
+        <div class="terminal-bar">
+          <div class="window-controls">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="terminal-title">sopanha-shell v1.0 — bash</span>
+          <span class="terminal-help-btn" id="termHelpTrigger">Type 'help' for options</span>
+        </div>
+
+        <div class="terminal-output" id="interactiveTermOutput">
+          <div class="term-line-out">Welcome to Un Sopanha's Interactive Terminal v1.0!</div>
+          <div class="term-line-out text-muted">Type <span class="text-accent">'help'</span> to view available commands.
+          </div>
+        </div>
+
+        <div class="terminal-input-row">
+          <span class="prompt">visitor@sopanha.dev:~$</span>
+          <input type="text" id="termInput" autocomplete="off" spellcheck="false"
+            placeholder="type a command (e.g. 'whoami', 'skills', 'projects', 'help')...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">05 / CONTACT ME</p>
+        <h2 class="section-title">Let's Build Something Together.</h2>
+        <p class="section-sub">Whether you have a web project, freelance inquiry, or just want to say hello — feel free
+          to reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <form class="contact-form card-glass" id="contactForm">
+          <div class="field">
+            <label for="name"><span class="prompt">$</span> set name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name or Company" required>
+          </div>
+          <div class="field">
+            <label for="email"><span class="prompt">$</span> set email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+          <div class="field">
+            <label for="subject"><span class="prompt">$</span> set subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Web Development / Inquiry" required>
+          </div>
+          <div class="field">
+            <label for="message"><span class="prompt">$</span> set message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>send_message()</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+
+        <!-- Contact Cards Side -->
+        <div class="contact-side">
+          <a href="mailto:panha2288@gmail.com" class="contact-card card-glass">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <span class="contact-link-label">Email Address</span>
+              <span class="contact-link-value">panha2288@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+855964615123" class="contact-card card-glass">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+              <span class="contact-link-label">Phone &amp; Telegram</span>
+              <span class="contact-link-value">+855 96 461 5123</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/SixC6C" target="_blank" rel="noopener" class="contact-card card-glass">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-details">
+              <span class="contact-link-label">GitHub Profile</span>
+              <span class="contact-link-value">github.com/SixC6C</span>
+            </div>
+          </a>
+
+          <div class="contact-card card-glass">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <span class="contact-link-label">Location</span>
+              <span class="contact-link-value">Phnom Penh, Cambodia</span>
+            </div>
+          </div>
+
+          <a href="CV_Un_Sopanha.pdf" download="CV_Un_Sopanha.pdf" class="contact-card card-glass highlight-card">
+            <div class="contact-icon">📄</div>
+            <div class="contact-details">
+              <span class="contact-link-label">Curriculum Vitae</span>
+              <span class="contact-link-value">Download PDF Resume ↓</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="nav-logo">
+          <span class="nav-logo-text">Un Sopanha<span class="text-accent">.dev</span></span>
+        </a>
+        <p class="footer-sub">Building web apps &amp; digital solutions in Phnom Penh, Cambodia.</p>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; <span id="year"></span> UN Sopanha. All rights reserved.</p>
+        <p class="tech-note">Built with HTML5, Vanilla CSS3 &amp; ES6 JavaScript.</p>
+      </div>
+
+      <button class="to-top" id="toTop" aria-label="Back to top">
+        <span>↑ TOP</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ===== PROJECT DETAIL MODAL ===== -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-container card-glass">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modalContent">
+        <!-- Dynamic Modal Content populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
+lass">
+<button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+<div class="modal-body" id="modalContent">
+  <!-- Dynamic Modal Content populated by JavaScript -->
+</div>
+</div>
+</div>
+
+<!-- Main JavaScript File -->
+<script src="script.js"></script>
+</body>
+
+</html>
