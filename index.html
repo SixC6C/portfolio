@@ -16,6 +16,10 @@
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
+  <!-- Devicon & FontAwesome Icon Libraries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicon/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -390,14 +394,19 @@
 
         <!-- Web & Frontend -->
         <div class="skill-card card-glass" data-cat="web">
-          <div class="skill-icon">🌐</div>
-          <h3>HTML5 & CSS3</h3>
-          <p>Semantic markup, modern layout techniques (Flexbox & CSS Grid), CSS animations, custom design systems.</p>
+          <div class="skill-icon">
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+          </div>
+          <h3>HTML5 &amp; CSS3</h3>
+          <p>Semantic markup, modern layout techniques (Flexbox &amp; CSS Grid), CSS animations, custom design systems.</p>
           <div class="skill-level"><span style="width: 90%;"></span></div>
         </div>
 
         <div class="skill-card card-glass" data-cat="web">
-          <div class="skill-icon">⚡</div>
+          <div class="skill-icon">
+            <i class="devicon-javascript-plain colored"></i>
+          </div>
           <h3>JavaScript (ES6+)</h3>
           <p>DOM manipulation, asynchronous fetch APIs, event handling, dynamic UI components, vanilla JS applications.
           </p>
@@ -405,46 +414,61 @@
         </div>
 
         <div class="skill-card card-glass" data-cat="web">
-          <div class="skill-icon">🎨</div>
-          <h3>Web & Responsive UI Design</h3>
+          <div class="skill-icon">
+            <i class="devicon-bootstrap-plain colored"></i>
+            <i class="devicon-tailwindcss-original colored"></i>
+          </div>
+          <h3>Web &amp; Responsive UI Design</h3>
           <p>Mobile-first responsive design, glassmorphism aesthetics, color theory, typography, component styling.</p>
           <div class="skill-level"><span style="width: 88%;"></span></div>
         </div>
 
         <!-- Programming & IT -->
         <div class="skill-card card-glass" data-cat="programming">
-          <div class="skill-icon">💻</div>
+          <div class="skill-icon">
+            <i class="devicon-cplusplus-plain colored"></i>
+            <i class="devicon-java-plain colored"></i>
+          </div>
           <h3>Programming Fundamentals</h3>
           <p>Object-Oriented Programming (OOP) concepts, data structures, algorithm logic in C/C++/Java.</p>
           <div class="skill-level"><span style="width: 80%;"></span></div>
         </div>
 
         <div class="skill-card card-glass" data-cat="programming">
-          <div class="skill-icon">🔌</div>
-          <h3>Networking & IT Setup</h3>
-          <p>TCP/IP fundamentals, LAN/WAN basics, router/switch configuration, computer hardware assembly &
+          <div class="skill-icon">
+            <i class="fa-solid fa-network-wired icon-cyan"></i>
+          </div>
+          <h3>Networking &amp; IT Setup</h3>
+          <p>TCP/IP fundamentals, LAN/WAN basics, router/switch configuration, computer hardware assembly &amp;
             troubleshooting.</p>
           <div class="skill-level"><span style="width: 84%;"></span></div>
         </div>
 
         <div class="skill-card card-glass" data-cat="programming">
-          <div class="skill-icon">🐙</div>
-          <h3>Git & Version Control</h3>
+          <div class="skill-icon">
+            <i class="devicon-git-plain colored"></i>
+            <i class="devicon-github-original"></i>
+          </div>
+          <h3>Git &amp; Version Control</h3>
           <p>Source code control using Git, repository management on GitHub (`github.com/SixC6C`), commit workflows.</p>
           <div class="skill-level"><span style="width: 78%;"></span></div>
         </div>
 
         <!-- Design & Media -->
         <div class="skill-card card-glass" data-cat="media">
-          <div class="skill-icon">🖼️</div>
+          <div class="skill-icon">
+            <i class="devicon-photoshop-plain colored"></i>
+          </div>
           <h3>Adobe Photoshop</h3>
-          <p>Image editing, banner creation, background removal, photo retouching, graphic design assets for web &
+          <p>Image editing, banner creation, background removal, photo retouching, graphic design assets for web &amp;
             social media.</p>
           <div class="skill-level"><span style="width: 85%;"></span></div>
         </div>
 
         <div class="skill-card card-glass" data-cat="media">
-          <div class="skill-icon">🎬</div>
+          <div class="skill-icon">
+            <i class="fa-solid fa-video icon-amber"></i>
+          </div>
           <h3>CapCut Video Editing</h3>
           <p>Short-form video editing, visual transitions, audio syncing, subtitle alignment, engaging promo content.
           </p>
@@ -452,7 +476,9 @@
         </div>
 
         <div class="skill-card card-glass" data-cat="media">
-          <div class="skill-icon">✨</div>
+          <div class="skill-icon">
+            <i class="devicon-canva-original colored"></i>
+          </div>
           <h3>Canva Design</h3>
           <p>Rapid graphic design prototyping, social media posters, infographics, presentation slides, brand templates.
           </p>
@@ -461,7 +487,9 @@
 
         <!-- Office & Marketing -->
         <div class="skill-card card-glass" data-cat="digital">
-          <div class="skill-icon">📊</div>
+          <div class="skill-icon">
+            <i class="devicon-facebook-plain colored"></i>
+          </div>
           <h3>Social Media Management</h3>
           <p>Facebook Page management, targeted audience boosting, post scheduling, page reach optimization, community
             engagement.</p>
@@ -469,16 +497,20 @@
         </div>
 
         <div class="skill-card card-glass" data-cat="digital">
-          <div class="skill-icon">📄</div>
+          <div class="skill-icon">
+            <i class="fa-solid fa-file-lines icon-blue"></i>
+          </div>
           <h3>MS Office Suite</h3>
-          <p>Word document formatting, Excel data analysis & formulas, PowerPoint presentation design, Outlook
+          <p>Word document formatting, Excel data analysis &amp; formulas, PowerPoint presentation design, Outlook
             communication.</p>
           <div class="skill-level"><span style="width: 94%;"></span></div>
         </div>
 
         <div class="skill-card card-glass" data-cat="digital">
-          <div class="skill-icon">💬</div>
-          <h3>Technical English & Khmer</h3>
+          <div class="skill-icon">
+            <i class="fa-solid fa-language icon-green"></i>
+          </div>
+          <h3>Technical English &amp; Khmer</h3>
           <p>Bilingual communication in Khmer (Native) and English (Advanced L10C) for technical docs and client
             discussion.</p>
           <div class="skill-level"><span style="width: 90%;"></span></div>

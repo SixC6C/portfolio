@@ -871,9 +871,21 @@ body.theme-dark .btn-primary {
 }
 
 .skill-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
+.skill-icon i {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.icon-cyan { color: var(--accent-cyan); }
+.icon-amber { color: var(--accent-amber); }
+.icon-blue { color: var(--accent-blue); }
+.icon-green { color: var(--accent-green); }
+.icon-purple { color: var(--accent-purple); }
 
 .skill-card h3 {
   font-size: 1.1rem;
