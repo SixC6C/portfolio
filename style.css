@@ -969,6 +969,8 @@ body.theme-dark .btn-primary {
 .preview-gradient-2 { background: linear-gradient(135deg, #2e1065, #0f172a); }
 .preview-gradient-3 { background: linear-gradient(135deg, #064e3b, #0f172a); }
 .preview-gradient-4 { background: linear-gradient(135deg, #78350f, #0f172a); }
+.preview-gradient-5 { background: linear-gradient(135deg, #4f1d96, #1e1b4b); }
+.preview-gradient-6 { background: linear-gradient(135deg, #0c4a6e, #134e4a); }
 
 .preview-mockup {
   width: 100%;
