@@ -276,10 +276,11 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>🏫 <strong>Hun Sen Borey 100 Khnang High School</strong> — Diploma (2021 - 2023)</div>
     `,
     projects: () => `
-      <div>1. <strong>Valorant Masterpiece Collection</strong> — PHP / CSS3 Glassmorphism Web App</div>
-      <div>2. <strong>Laravel Food Ordering System</strong> — Full-Stack Laravel / Vite / MySQL App</div>
-      <div>3. <strong>Loan & Borrower Management System (LMS)</strong> — PHP / MySQL Enterprise System</div>
-      <div>4. <strong>Human Resource Management (HRM) System</strong> — Admin Portal & Database System</div>
+      <div>1. 🎙️ <strong>Khmer AI Voice Studio</strong> — Neural Khmer Speech Synthesis Web App (<a href="https://text-ivory-eight.vercel.app" target="_blank" style="color: var(--accent-cyan); text-decoration: underline;">text-ivory-eight.vercel.app</a>)</div>
+      <div>2. 🎨 <strong>Final Exam UI Design</strong> — Comprehensive Figma Design System &amp; Prototype</div>
+      <div>3. 🚌 <strong>Bus Ticket Booking App</strong> — Mobile UI/UX Design System in Figma</div>
+      <div>4. 🎮 <strong>Valorant Masterpiece Collection</strong> — PHP / CSS3 Glassmorphism Web App</div>
+      <div>5. 🍕 <strong>Laravel Food Ordering System</strong> — Full-Stack Laravel / Vite / MySQL App</div>
     `,
     contact: () => `
       <div>📧 <strong>Email:</strong> panha2288@gmail.com</div>
@@ -358,6 +359,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalContent = document.getElementById('modalContent');
 
   const projectDetails = {
+    khmer_tts: {
+      title: "Khmer AI Voice Studio",
+      category: "AI Speech Synthesis & Web Application",
+      tech: ["Edge Neural TTS", "JavaScript (ES6+)", "Web Audio API", "HTML5 Canvas", "CSS3 Glassmorphism", "Vercel"],
+      desc: "A next-generation, high-performance Khmer speech synthesis web application that converts Khmer Unicode script into expressive, natural speech. Featuring dual voice personas, interactive real-time waveforms, precision speed and pitch modulators, MP3 audio exports, and a developer API integration suite.",
+      highlights: [
+        "Deep Neural Speech Synthesis specifically optimized for Khmer script phonetics.",
+        "Interactive real-time audio waveform visualizer dynamically rendered on HTML5 Canvas.",
+        "Dual voice personas (Sreymom - Female / Piseth - Male) with speed & pitch tuning deck.",
+        "Instant MP3 audio download with client-side audio playback scrubbing.",
+        "Interactive Developer API integration modal with cURL, Python, and JavaScript examples.",
+        "Conversion history library with search & local storage caching."
+      ],
+      github: "https://github.com/SixC6C",
+      liveDemo: "https://text-ivory-eight.vercel.app"
+    },
     p1: {
       title: "Valorant Masterpiece Collection",
       category: "Web Application / Gaming Showcase",
@@ -429,9 +446,10 @@ document.addEventListener('DOMContentLoaded', () => {
           ${data.tech.map(t => `<span class="tag tag-fn">${t}</span>`).join('')}
         </div>
 
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="${data.github}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">View Code on GitHub →</a>
-          <button onclick="document.getElementById('projectModal').classList.remove('open')" class="btn btn-ghost btn-sm">Close Window</button>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          ${data.liveDemo ? `<a href="${data.liveDemo}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Launch Live Demo ↗</a>` : ''}
+          <a href="${data.github}" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub / Source →</a>
+          <button onclick="document.getElementById('projectModal').classList.remove('open')" class="btn btn-outline btn-sm">Close Window</button>
         </div>
       `;
 
