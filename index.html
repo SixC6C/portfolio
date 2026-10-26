@@ -5,19 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Un Sopanha — Computer Science Student & Web Developer based in Phnom Penh, Cambodia. Specializing in Web Design, HTML/CSS/JS, IT Networking, and Digital Content.">
+    content="Un Sopanha — Year 4 Computer Science Senior at Western University & Vibe Coder based in Phnom Penh, Cambodia. Creator of Khmer AI Voice Studio.">
   <meta name="author" content="Un Sopanha">
-  <title>Un Sopanha — Web Developer & CS Student</title>
+  <title>Un Sopanha — Year 4 CS Senior & Vibe Coder | Portfolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- Devicon v2 (stable) & FontAwesome Icon Libraries -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicon/devicon@v2.16.0/devicon.min.css">
+  <!-- FontAwesome 6 Vector Icon Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <!-- Main Stylesheet -->
@@ -26,40 +29,51 @@
 
 <body class="theme-dark">
 
-  <!-- Canvas Background for Particle Matrix / Ambient Glow -->
-  <canvas id="bgCanvas"></canvas>
+  <!-- Smooth Hardware-Accelerated Ambient Mesh Glow (Zero Lag) -->
+  <div class="ambient-aura-container" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Ultra-Lightweight Floating Spark Canvas (22 particles, 0% CPU lag) -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- Smooth Mouse Spotlight Follower -->
+  <div class="mouse-spotlight" id="mouseSpotlight" aria-hidden="true"></div>
 
   <!-- ===== NAVIGATION ===== -->
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a href="#top" class="nav-logo">
-        <span class="status-indicator" title="Available for opportunities"></span>
-        <span class="nav-logo-text">Sopanha<span class="text-accent">.dev</span></span>
+        <span class="status-indicator" title="In Flow State"></span>
+        <span class="nav-logo-text">Sopanha<span class="text-accent">.vibe</span></span>
+        <span class="nav-vibe-tag">YEAR 4</span>
       </a>
 
       <nav class="nav-links" id="navLinks">
         <a href="#about" class="tab">About</a>
-        <a href="#education" class="tab">Education</a>
-        <a href="#skills" class="tab">Skills</a>
-        <a href="#work" class="tab">Work</a>
-        <a href="#contact" class="tab">Contact</a>
+        <a href="#education" class="tab">Journey</a>
+        <a href="#skills" class="tab">Vibe Stack</a>
+        <a href="#work" class="tab">Creations</a>
+        <a href="#vibe-console" class="tab">Vibe Deck</a>
+        <a href="#contact" class="tab">Connect</a>
       </nav>
 
       <div class="nav-actions">
         <button id="themeToggle" onclick="toggleTheme()" class="icon-btn" aria-label="Toggle Light/Dark Theme"
           title="Toggle Theme">
-          <span class="theme-icon" id="themeIcon">🌙</span>
+          <span class="theme-icon" id="themeIcon"><i class="fa-solid fa-moon"></i></span>
         </button>
         <a href="CV_Un_Sopanha.pdf" download="CV_Un_Sopanha.pdf" class="btn btn-primary btn-sm">
-          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          CV PDF
+          Senior CV
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -69,42 +83,51 @@
   <!-- ===== HERO SECTION ===== -->
   <section class="hero" id="top">
     <div class="hero-inner">
-      <div class="hero-text">
-        <div class="badge-status">
-          <span class="badge-dot"></span>
-          <span>Open for Freelance & Web Opportunities</span>
+      <div class="hero-text reveal-on-scroll">
+        <div class="hero-status-row">
+          <div class="badge-status">
+            <span class="badge-dot"></span>
+            <span>In Flow • Open for High-Impact Roles</span>
+          </div>
+          <div class="badge-senior">
+            <span><i class="fa-solid fa-graduation-cap"></i> Western University • Year 4 Senior (2026)</span>
+          </div>
         </div>
-        <p class="eyebrow">// Hello World, I'm</p>
-        <h1 class="hero-title">UN SOPANHA</h1>
 
-        <p class="hero-role">
-          <span class="role-static">Specializing in </span>
-          <span class="role-typed" id="typedRole"></span>
+        <p class="hero-eyebrow">✦ VIBE CODING &amp; AI-AUGMENTED SOFTWARE</p>
+
+        <h1 class="hero-title">
+          UN SOPANHA<br>
+          <span class="hero-title-accent">Building with Flow &amp; AI</span>
+        </h1>
+
+        <div class="hero-vibe-subtitle">
+          <span class="vibe-tag-label">Specializing in</span>
+          <span class="vibe-typed" id="typedVibe"></span>
           <span class="cursor-blink">|</span>
-        </p>
+        </div>
 
         <p class="hero-desc">
-          Computer Science student at <strong>Western University</strong> based in Phnom Penh, Cambodia.
-          Dedicated to crafting modern, responsive web interfaces, robust networking solutions, and engaging digital
-          media.
+          Computer Science Senior at <strong>Western University</strong> in Phnom Penh. Embracing the modern vibe coding
+          era: orchestrating AI tools with rigorous software foundations to ship responsive web apps, neural speech
+          engines, and aesthetic user experiences.
         </p>
 
         <div class="hero-pills">
-          <span class="pill">📍 Phnom Penh, KH</span>
-          <span class="pill">🎓 Western University — Year 4 CS</span>
-          <span class="pill">🌐 Khmer (Native) / English (L11C)</span>
+          <span class="pill pill-highlight"><i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia</span>
+          <span class="pill"><i class="fa-solid fa-graduation-cap"></i> Western University — Year 4 CS</span>
         </div>
 
         <div class="hero-cta">
           <a href="#work" class="btn btn-primary">
-            <span>view_work()</span>
+            <span>Explore Creations ✦</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <a href="#contact" class="btn btn-ghost">
-            <span>get_in_touch()</span>
+          <a href="#vibe-console" class="btn btn-ghost">
+            <span>Open Vibe Deck</span>
           </a>
           <a href="CV_Un_Sopanha.pdf" download="CV_Un_Sopanha.pdf" class="btn btn-outline">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -112,13 +135,13 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            <span>Download Resume</span>
+            <span>Resume (PDF)</span>
           </a>
         </div>
       </div>
 
       <!-- Profile Photo Showcase Component -->
-      <div class="hero-photo-container">
+      <div class="hero-photo-container reveal-on-scroll">
         <div class="hero-photo-card card-glass">
           <div class="photo-card-bar">
             <div class="window-controls">
@@ -126,33 +149,37 @@
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
             </div>
-            <span class="photo-card-title">sopanha_profile.jpg</span>
+            <span class="photo-card-title">sopanha_vibe_flow.png</span>
             <span class="photo-card-tag">ONLINE</span>
           </div>
 
           <div class="photo-wrapper">
-            <img src="sopanha.jpg" alt="Un Sopanha — Web Developer" class="hero-img">
+            <img src="sopanha.jpg" alt="Un Sopanha — Year 4 CS Senior & Vibe Coder" class="hero-img">
             <div class="photo-gradient-overlay"></div>
 
             <!-- Floating Decoration Badges -->
             <div class="float-badge float-top-right card-glass">
               <span class="badge-dot"></span>
-              <span>Available for Hire</span>
+              <div class="float-text">
+                <span class="float-title">Ready for Hire</span>
+                <span class="float-sub">Full-Stack / Frontend / AI</span>
+              </div>
             </div>
 
             <div class="float-badge float-bottom-left card-glass">
-              <span class="float-icon">🎓</span>
+              <span class="float-icon"><i class="fa-solid fa-graduation-cap"
+                  style="color: var(--slate-cyan);"></i></span>
               <div class="float-text">
                 <span class="float-title">Western University</span>
-                <span class="float-sub">Year 3/4 CS Student</span>
+                <span class="float-sub">Year 4 Senior (Class of 2026)</span>
               </div>
             </div>
 
             <div class="float-badge float-bottom-right card-glass">
-              <span class="float-icon">⚡</span>
+              <span class="float-icon"><i class="fa-solid fa-bolt" style="color: var(--emerald-light);"></i></span>
               <div class="float-text">
-                <span class="float-title">Web Developer</span>
-                <span class="float-sub">Full-Stack &amp; Networking</span>
+                <span class="float-title">Vibe Coder</span>
+                <span class="float-sub">AI Velocity × Clean Code</span>
               </div>
             </div>
           </div>
@@ -160,80 +187,85 @@
       </div>
     </div>
 
-    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+    <a href="#about" class="scroll-hint" aria-label="Scroll to explore">
       <span class="mouse-icon"><span class="wheel"></span></span>
-      <span>scroll_down</span>
+      <span>scroll_to_explore</span>
     </a>
   </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
+  <!-- ===== 01 / ABOUT SECTION ===== -->
   <section class="section" id="about">
     <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">01 / ABOUT ME</p>
-        <h2 class="section-title">Clean design, structured code & continuous growth.</h2>
+      <div class="section-header reveal-on-scroll">
+        <p class="section-label">01 / PHILOSOPHY &amp; IDENTITY</p>
+        <h2 class="section-title">Harmonizing Computer Science Foundations with Modern Vibe Velocity.</h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-copy">
+        <div class="about-copy reveal-on-scroll">
           <p class="lead-text">
-            Hi, I'm <strong>Un Sopanha</strong> — a Cambodian Computer Science student and Web Developer focused on
-            building functional, elegant, and responsive user experiences.
+            Hi, I'm <strong>Un Sopanha</strong> — a 4th-year Computer Science senior and Vibe Coder focused on turning
+            ideas into living, high-performance digital software.
           </p>
           <p>
-            Currently pursuing my Bachelor's Degree in Computer Science at <strong>Western University</strong>, I
-            combine technical software fundamentals with practical web design and digital media skills. From crafting
-            intuitive front-end layouts to handling network configurations and digital page management, I enjoy solving
-            problems end-to-end.
+            Currently in my graduating year at <strong>Western University</strong> in Phnom Penh, I have transitioned
+            from traditional manual programming into <em>vibe coding</em> — an approach where software engineers act as
+            creative conductors, leveraging state-of-the-art AI workflows while maintaining deep mastery over data
+            structures, web protocols, and clean design.
           </p>
           <p>
-            I am an active researcher of emerging web technologies, high-performance web standards, and modern UI design
-            trends.
+            Whether developing neural audio applications like <strong>Khmer AI Voice Studio</strong>, building
+            responsive Laravel MVC architectures, or designing intuitive Figma prototypes, I focus on velocity,
+            aesthetic polish, and seamless user experiences.
           </p>
 
           <div class="stat-row">
             <div class="stat-card">
-              <span class="stat-num">Year 3+</span>
-              <span class="stat-label">Computer Science Student</span>
+              <span class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span class="stat-num">Year 4</span>
+              <span class="stat-label">Senior CS Student</span>
             </div>
             <div class="stat-card">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">Web & Digital Projects</span>
+              <span class="stat-icon"><i class="fa-solid fa-laptop-code"></i></span>
+              <span class="stat-num">15+</span>
+              <span class="stat-label">AI &amp; Web Projects</span>
             </div>
             <div class="stat-card">
+              <span class="stat-icon"><i class="fa-solid fa-bolt"></i></span>
               <span class="stat-num">100%</span>
-              <span class="stat-label">Dedicated & Orderly</span>
+              <span class="stat-label">Flow State &amp; Focus</span>
             </div>
           </div>
         </div>
 
-        <div class="about-file">
-          <div class="file-card">
+        <div class="about-file reveal-on-scroll">
+          <div class="file-card card-glass">
             <div class="file-card-bar">
-              <span class="file-icon">📄</span>
-              <span class="file-name">sopanha_profile.md</span>
+              <span class="file-icon"><i class="fa-solid fa-code"></i></span>
+              <span class="file-name">sopanha_manifesto.md</span>
             </div>
             <div class="file-card-body">
-              <p><span class="md-h">## Personal Details</span></p>
+              <p><span class="md-h"><i class="fa-solid fa-id-card"></i> ## Personal Overview</span></p>
               <ul class="md-list">
-                <li><strong>Full Name:</strong> Un Sopanha</li>
-                <li><strong>Date of Birth:</strong> June 22, 2005</li>
-                <li><strong>Place of Birth:</strong> Kompong Cham, Cambodia</li>
-                <li><strong>Address:</strong> Sen Sok, Phnom Penh</li>
-                <li><strong>Nationality:</strong> Cambodian</li>
+                <li><i class="fa-solid fa-user md-icon"></i> <strong>Full Name:</strong> Un Sopanha</li>
+                <li><i class="fa-solid fa-graduation-cap md-icon"></i> <strong>University:</strong> Western University (Year 4 CS)</li>
+                <li><i class="fa-solid fa-location-dot md-icon"></i> <strong>Location:</strong> Sen Sok, Phnom Penh, Cambodia</li>
+                <li><i class="fa-solid fa-laptop-code md-icon"></i> <strong>Specialty:</strong> AI-Augmented Web Dev &amp; Modern UI</li>
+                <li><i class="fa-solid fa-certificate md-icon"></i> <strong>Status:</strong> Graduating Senior (2026)</li>
               </ul>
 
-              <p><span class="md-h">## Languages</span></p>
+              <p><span class="md-h"><i class="fa-solid fa-language"></i> ## Languages</span></p>
               <ul class="md-list">
-                <li><strong>Khmer:</strong> Native / Mother tongue</li>
-                <li><strong>English:</strong> Advanced (Grade 12)</li>
+                <li><i class="fa-solid fa-earth-asia md-icon"></i> <strong>Khmer:</strong> Native / Mother tongue</li>
+                <li><i class="fa-solid fa-book-open-reader md-icon"></i> <strong>English:</strong> Level 12 (CEFR B2) • 2021 – 2026 (Technical &amp; Professional)</li>
               </ul>
 
-              <p><span class="md-h">## Personal Interests</span></p>
+              <p><span class="md-h"><i class="fa-solid fa-fire-flame-curved"></i> ## Flow State Habits</span></p>
               <div class="habits-tags">
-                <span class="tag tag-kw">🔬 Tech Research</span>
-                <span class="tag tag-fn">⚽ Sports & Fitness</span>
-                <span class="tag tag-str">🎵 Music</span>
+                <span class="tag tag-fn"><i class="fa-solid fa-brain"></i> AI Prototyping</span>
+                <span class="tag tag-kw"><i class="fa-solid fa-palette"></i> UI/UX Design</span>
+                <span class="tag tag-str"><i class="fa-solid fa-headphones"></i> Ambient Music</span>
+                <span class="tag tag-num"><i class="fa-solid fa-dumbbell"></i> Fitness &amp; Sports</span>
               </div>
             </div>
           </div>
@@ -242,129 +274,136 @@
     </div>
   </section>
 
-  <!-- ===== EDUCATION & EXPERIENCE SECTION ===== -->
+  <!-- ===== 02 / EDUCATION & JOURNEY SECTION ===== -->
   <section class="section section-alt" id="education">
     <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">02 / ACADEMICS & JOURNEY</p>
-        <h2 class="section-title">Education & Qualifications</h2>
-        <p class="section-sub">My academic background, technical training, and practical experience.</p>
+      <div class="section-header reveal-on-scroll">
+        <p class="section-label">02 / ACADEMICS &amp; JOURNEY</p>
+        <h2 class="section-title">Education &amp; Experience Journey</h2>
+        <p class="section-sub">From foundational software principles to advanced Year 4 capstone engineering.</p>
       </div>
 
       <div class="timeline">
 
-        <!-- Timeline Item 1 -->
-        <div class="timeline-item">
+        <!-- Timeline Item 1: Western University (Year 4) -->
+        <div class="timeline-item reveal-on-scroll">
           <div class="timeline-marker">
             <div class="marker-dot"></div>
           </div>
           <div class="timeline-content card-glass">
             <div class="timeline-header">
-              <span class="timeline-badge">Present</span>
-              <span class="timeline-location">Phnom Penh, Cambodia</span>
+              <span class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i> 2022 – Present • Year 4 Senior</span>
+              <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia</span>
             </div>
             <h3 class="timeline-title">Western University</h3>
-            <h4 class="timeline-subtitle">Bachelor's Degree of Computer Science</h4>
+            <h4 class="timeline-subtitle">Bachelor's Degree of Computer Science (Senior Year)</h4>
             <p class="timeline-desc">
-              Currently pursuing a B.S. in Computer Science. Coursework includes Software Engineering, Web Technologies,
-              Database Systems, Computer Architecture, Data Structures, and Object-Oriented Programming.
+              Currently completing Year 4 senior coursework and capstone engineering. Curriculum highlights include
+              Senior Capstone Project, Advanced Web Systems, AI &amp; Neural Audio Integrations, Software Engineering,
+              Database Systems, Object-Oriented Architecture, and Computer Networking.
             </p>
             <div class="tag-list">
-              <span class="tag tag-fn">Computer Science</span>
-              <span class="tag tag-kw">Software Engineering</span>
-              <span class="tag tag-str">Database Management</span>
-              <span class="tag tag-num">Web Development</span>
+              <span class="tag tag-fn"><i class="fa-solid fa-user-graduate"></i> Year 4 Senior</span>
+              <span class="tag tag-kw"><i class="fa-solid fa-laptop-code"></i> Capstone Project</span>
+              <span class="tag tag-str"><i class="fa-solid fa-network-wired"></i> AI Web Systems</span>
+              <span class="tag tag-num"><i class="fa-solid fa-diagram-project"></i> Software Architecture</span>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Item 2 -->
-        <div class="timeline-item">
+        <!-- Timeline Item 2: ETEC Center -->
+        <div class="timeline-item reveal-on-scroll">
           <div class="timeline-marker">
             <div class="marker-dot"></div>
           </div>
           <div class="timeline-content card-glass">
             <div class="timeline-header">
-              <span class="timeline-badge">2023 – 2024</span>
-              <span class="timeline-location">Phnom Penh, Cambodia</span>
+              <span class="timeline-badge"><i class="fa-solid fa-certificate"></i> 2023 – 2024</span>
+              <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia</span>
             </div>
             <h3 class="timeline-title">ETEC CENTER</h3>
-            <h4 class="timeline-subtitle">Fundamentals of Programming & Networking</h4>
+            <h4 class="timeline-subtitle">Fundamentals of Programming &amp; Networking</h4>
             <p class="timeline-desc">
-              Completed specialized technical training in core programming logic, computer networking architectures,
-              system hardware/software troubleshooting, and advanced MS Office Applications.
+              Completed intensive technical training in core algorithmic logic, computer networking architectures,
+              system hardware/software troubleshooting, and advanced office productivity tools.
             </p>
             <div class="tag-list">
-              <span class="tag tag-kw">Networking Fundamentals</span>
-              <span class="tag tag-fn">C/C++ Programming</span>
-              <span class="tag tag-str">MS Office Suite</span>
+              <span class="tag tag-kw"><i class="fa-solid fa-network-wired"></i> Networking Architectures</span>
+              <span class="tag tag-fn"><i class="fa-solid fa-code"></i> C/C++ Programming</span>
+              <span class="tag tag-str"><i class="fa-solid fa-server"></i> Hardware Systems</span>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Item 3 -->
-        <div class="timeline-item">
+        <!-- Timeline Item 3: Digital Specialist -->
+        <div class="timeline-item reveal-on-scroll">
           <div class="timeline-marker">
             <div class="marker-dot"></div>
           </div>
           <div class="timeline-content card-glass">
             <div class="timeline-header">
-              <span class="timeline-badge">Experience</span>
-              <span class="timeline-location">Digital Marketing & Content</span>
+              <span class="timeline-badge"><i class="fa-solid fa-briefcase"></i> Experience</span>
+              <span class="timeline-location"><i class="fa-solid fa-bullhorn"></i> Digital Media &amp; Content</span>
             </div>
-            <h3 class="timeline-title">Social Media & Digital Content Management</h3>
-            <h4 class="timeline-subtitle">Page Manager & Digital Specialist</h4>
+            <h3 class="timeline-title">Social Media &amp; Digital Content Management</h3>
+            <h4 class="timeline-subtitle">Page Manager &amp; Digital Specialist</h4>
             <p class="timeline-desc">
-              Managed Facebook Pages and social accounts. Conducted audience content research, graphic design via
-              Photoshop & Canva, video editing with CapCut, and targeted Facebook advertising/boosting strategies.
+              Managed Facebook Pages and digital audiences. Conducted content strategy, brand visuals using Adobe
+              Photoshop &amp; Canva, short-form video production with CapCut, and targeted digital audience boosting.
             </p>
             <div class="tag-list">
-              <span class="tag tag-num">Social Media Strategy</span>
-              <span class="tag tag-fn">Photoshop / Canva</span>
-              <span class="tag tag-kw">Page Boosting & Ads</span>
-              <span class="tag tag-str">CapCut</span>
+              <span class="tag tag-num"><i class="fa-solid fa-chart-line"></i> Audience Growth</span>
+              <span class="tag tag-fn"><i class="fa-solid fa-palette"></i> Photoshop &amp; Canva</span>
+              <span class="tag tag-kw"><i class="fa-solid fa-film"></i> CapCut Video</span>
+              <span class="tag tag-str"><i class="fa-solid fa-arrow-trend-up"></i> Page Boosting</span>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Item 4 -->
-        <div class="timeline-item">
+        <!-- Timeline Item 4: Sovannaphumi School -->
+        <div class="timeline-item reveal-on-scroll">
           <div class="timeline-marker">
             <div class="marker-dot"></div>
           </div>
           <div class="timeline-content card-glass">
             <div class="timeline-header">
-              <span class="timeline-badge">2021 – 2023</span>
+              <span class="timeline-badge">2021 – 2026 • Level 12 (B2)</span>
               <span class="timeline-location">Sovannaphumi School</span>
             </div>
-            <h3 class="timeline-title">General English Program</h3>
-            <h4 class="timeline-subtitle">Grade 11 English Proficiency</h4>
+            <h3 class="timeline-title">General English Program (GEP)</h3>
+            <h4 class="timeline-subtitle">Level 12 • CEFR B2 (Upper-Intermediate)</h4>
             <p class="timeline-desc">
-              Graduated with advanced proficiency in English speaking, academic writing, reading comprehension, and
-              professional technical documentation.
+              Completed progressive coursework through Level 12 (CEFR B2) from 2021 to 2026. Proficient in technical documentation, international software team collaboration, academic research writing, and professional client communication.
             </p>
             <div class="tag-list">
-              <span class="tag tag-str">English Communication</span>
-              <span class="tag tag-fn">Technical Writing</span>
+              <span class="tag tag-fn"><i class="fa-solid fa-award"></i> Level 12</span>
+              <span class="tag tag-kw"><i class="fa-solid fa-language"></i> CEFR B2</span>
+              <span class="tag tag-str"><i class="fa-solid fa-calendar"></i> 2021 – 2026</span>
+              <span class="tag tag-num"><i class="fa-solid fa-book-open"></i> Technical English</span>
             </div>
           </div>
         </div>
 
-        <!-- Timeline Item 5 -->
-        <div class="timeline-item">
+        <!-- Timeline Item 5: High School -->
+        <div class="timeline-item reveal-on-scroll">
           <div class="timeline-marker">
             <div class="marker-dot"></div>
           </div>
           <div class="timeline-content card-glass">
             <div class="timeline-header">
-              <span class="timeline-badge">2021 – 2023</span>
-              <span class="timeline-location">Hun Sen Borey 100 Khnang High School</span>
+              <span class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i> 2021 – 2023</span>
+              <span class="timeline-location"><i class="fa-solid fa-school"></i> Hun Sen Borey 100 Khnang High School</span>
             </div>
             <h3 class="timeline-title">High School Graduation</h3>
-            <h4 class="timeline-subtitle">High School Diploma</h4>
+            <h4 class="timeline-subtitle">High School BacII Diploma</h4>
             <p class="timeline-desc">
-              Graduated successfully with strong foundation in mathematics, physics, and general science.
+              Graduated successfully with solid foundations in mathematics, physical sciences, and analytical
+              problem-solving.
             </p>
+            <div class="tag-list">
+              <span class="tag tag-fn"><i class="fa-solid fa-scroll"></i> High School Diploma</span>
+              <span class="tag tag-kw"><i class="fa-solid fa-calculator"></i> Mathematics &amp; Science</span>
+            </div>
           </div>
         </div>
 
@@ -372,197 +411,221 @@
     </div>
   </section>
 
-  <!-- ===== SKILLS SECTION ===== -->
+  <!-- ===== 03 / VIBE STACK & SKILLS SECTION ===== -->
   <section class="section" id="skills">
     <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">03 / TECH TOOLBOX</p>
-        <h2 class="section-title">Skills & Capabilities</h2>
-        <p class="section-sub">Technologies, tools, and digital platforms I work with.</p>
+      <div class="section-header reveal-on-scroll">
+        <p class="section-label">03 / VIBE TOOLBOX</p>
+        <h2 class="section-title">Skills &amp; Capabilities</h2>
+        <p class="section-sub">Tools, frameworks, and AI workflows I leverage to ship modern software.</p>
       </div>
 
       <!-- Skill Category Tabs -->
-      <div class="skills-filter" id="skillsFilter">
-        <button class="filter-btn active" data-skill-cat="all">All Skills</button>
-        <button class="filter-btn" data-skill-cat="web">Web & Frontend</button>
-        <button class="filter-btn" data-skill-cat="programming">Programming & IT</button>
-        <button class="filter-btn" data-skill-cat="media">Design & Media</button>
-        <button class="filter-btn" data-skill-cat="digital">Office & Marketing</button>
+      <div class="skills-filter reveal-on-scroll" id="skillsFilter">
+        <button class="filter-btn active" data-skill-cat="all">All Tools</button>
+        <button class="filter-btn" data-skill-cat="vibe">AI &amp; Vibe Workflows</button>
+        <button class="filter-btn" data-skill-cat="web">Modern Web &amp; Frontend</button>
+        <button class="filter-btn" data-skill-cat="backend">Backend &amp; Core Systems</button>
+        <button class="filter-btn" data-skill-cat="media">Design &amp; Media</button>
       </div>
 
       <div class="skills-grid" id="skillsGrid">
 
-        <!-- Web & Frontend -->
-        <div class="skill-card card-glass" data-cat="web">
+        <!-- AI & Vibe Workflows -->
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="vibe">
           <div class="skill-icon">
-            <i class="devicon-html5-plain colored" title="HTML5"></i>
-            <i class="devicon-css3-plain colored" title="CSS3"></i>
+            <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--emerald-light);"
+              title="AI & Vibe Coding"></i>
+            <i class="fa-solid fa-microchip" style="color: var(--slate-cyan);" title="LLM Tooling"></i>
           </div>
-          <h3>HTML5 &amp; CSS3</h3>
-          <p>Semantic markup, modern layout techniques (Flexbox &amp; CSS Grid), CSS animations, custom design systems.
-          </p>
-          <div class="skill-level"><span style="width: 90%;"></span></div>
+          <h3>AI-Augmented Vibe Coding</h3>
+          <p>Cursor AI, Claude 3.5, Gemini 2.5, Antigravity, LLM prompt engineering, rapid functional prototyping, and
+            human-in-the-loop code synthesis.</p>
+          <div class="skill-level"><span style="width: 95%;"></span></div>
         </div>
 
-        <div class="skill-card card-glass" data-cat="web">
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="vibe">
           <div class="skill-icon">
-            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
-            <i class="devicon-php-plain colored" title="PHP"></i>
+            <i class="fa-solid fa-wave-square" style="color: var(--emerald-bright);" title="Neural Audio"></i>
+            <i class="fa-solid fa-robot" style="color: var(--slate-purple);" title="Edge AI"></i>
           </div>
-          <h3>JavaScript &amp; PHP</h3>
-          <p>DOM manipulation, asynchronous APIs, event handling, dynamic UI components, and server-side PHP scripting.
-          </p>
-          <div class="skill-level"><span style="width: 82%;"></span></div>
-        </div>
-
-        <div class="skill-card card-glass" data-cat="web">
-          <div class="skill-icon">
-            <i class="devicon-laravel-plain colored" title="Laravel"></i>
-            <i class="devicon-mysql-plain colored" title="MySQL"></i>
-          </div>
-          <h3>Laravel &amp; MySQL</h3>
-          <p>Full-stack web apps with Laravel MVC framework, Eloquent ORM, database migrations, and RESTful routing.</p>
-          <div class="skill-level"><span style="width: 88%;"></span></div>
-        </div>
-
-        <!-- Programming & IT -->
-        <div class="skill-card card-glass" data-cat="programming">
-          <div class="skill-icon">
-            <i class="devicon-cplusplus-plain colored" title="C++"></i>
-            <i class="devicon-java-plain colored" title="Java"></i>
-          </div>
-          <h3>Programming Fundamentals</h3>
-          <p>Object-Oriented Programming (OOP) concepts, data structures, algorithm logic in C/C++/Java.</p>
-          <div class="skill-level"><span style="width: 80%;"></span></div>
-        </div>
-
-        <div class="skill-card card-glass" data-cat="programming">
-          <div class="skill-icon">
-            <i class="fa-solid fa-network-wired icon-cyan" title="Networking"></i>
-            <i class="devicon-linux-plain" title="Linux" style="color:#FCC624;"></i>
-          </div>
-          <h3>Networking &amp; IT Setup</h3>
-          <p>TCP/IP fundamentals, LAN/WAN basics, router/switch configuration, computer hardware assembly &amp;
-            troubleshooting.</p>
-          <div class="skill-level"><span style="width: 84%;"></span></div>
-        </div>
-
-        <div class="skill-card card-glass" data-cat="programming">
-          <div class="skill-icon">
-            <i class="devicon-git-plain colored" title="Git"></i>
-            <i class="devicon-github-original" title="GitHub" style="color: var(--text);"></i>
-          </div>
-          <h3>Git &amp; GitHub</h3>
-          <p>Source code control using Git, repository management on GitHub (`github.com/SixC6C`), commit workflows.</p>
-          <div class="skill-level"><span style="width: 78%;"></span></div>
-        </div>
-
-        <!-- Design & Media -->
-        <div class="skill-card card-glass" data-cat="media">
-          <div class="skill-icon">
-            <i class="devicon-photoshop-plain colored" title="Adobe Photoshop"></i>
-          </div>
-          <h3>Adobe Photoshop</h3>
-          <p>Image editing, banner creation, background removal, photo retouching, graphic design assets for web &amp;
-            social media.</p>
-          <div class="skill-level"><span style="width: 85%;"></span></div>
-        </div>
-
-        <div class="skill-card card-glass" data-cat="media">
-          <div class="skill-icon">
-            <i class="fa-solid fa-video icon-amber"></i>
-          </div>
-          <h3>CapCut Video Editing</h3>
-          <p>Short-form video editing, visual transitions, audio syncing, subtitle alignment, engaging promo content.
-          </p>
-          <div class="skill-level"><span style="width: 86%;"></span></div>
-        </div>
-
-        <div class="skill-card card-glass" data-cat="media">
-          <div class="skill-icon">
-            <i class="devicon-figma-plain colored" title="Figma/Canva Design"></i>
-          </div>
-          <h3>Canva &amp; UI Design</h3>
-          <p>Rapid graphic design prototyping, social media posters, infographics, presentation slides, brand templates.
-          </p>
+          <h3>Edge AI &amp; Neural Audio</h3>
+          <p>Edge Neural TTS integration, Web Audio API synthesis, HTML5 Canvas waveform audio visualizers, and
+            real-time audio playback scrubbing.</p>
           <div class="skill-level"><span style="width: 92%;"></span></div>
         </div>
 
-        <!-- Office & Marketing -->
-        <div class="skill-card card-glass" data-cat="digital">
+        <!-- Modern Web & Frontend -->
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="web">
           <div class="skill-icon">
-            <i class="fa-brands fa-facebook icon-blue" title="Facebook" style="color:#1877F2;"></i>
+            <i class="fa-brands fa-html5" style="color: #e34f26;" title="HTML5"></i>
+            <i class="fa-brands fa-css3-alt" style="color: #1572b6;" title="CSS3"></i>
           </div>
-          <h3>Social Media Management</h3>
-          <p>Facebook Page management, targeted audience boosting, post scheduling, page reach optimization, community
-            engagement.</p>
+          <h3>HTML5 &amp; Modern CSS</h3>
+          <p>Clean semantic markup, Flexbox, CSS Grid, custom design systems, hardware-accelerated animations, and
+            responsive glassmorphism.</p>
+          <div class="skill-level"><span style="width: 92%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="web">
+          <div class="skill-icon">
+            <i class="fa-brands fa-js" style="color: #f7df1e;" title="JavaScript"></i>
+            <i class="fa-solid fa-bolt" style="color: var(--slate-amber);" title="ES6+"></i>
+          </div>
+          <h3>JavaScript (ES6+)</h3>
+          <p>Asynchronous APIs (async/await, fetch), DOM manipulation, dynamic state management, custom modals, and
+            interactive user components.</p>
+          <div class="skill-level"><span style="width: 86%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="web">
+          <div class="skill-icon">
+            <i class="fa-brands fa-react" style="color: #61dafb;" title="React"></i>
+            <i class="fa-solid fa-atom" style="color: var(--emerald-bright);" title="Component Architecture"></i>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+            <h3 style="margin-bottom: 0;">React</h3>
+            <span class="tag tag-kw" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">Beginner</span>
+          </div>
+          <p>Learning modern component-based UI engineering, JSX syntax, state &amp; props, functional components, hooks
+            (`useState`, `useEffect`), and SPA architecture.</p>
+          <div class="skill-level"><span style="width: 48%;"></span></div>
+        </div>
+
+        <!-- Backend & Core Systems -->
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="backend">
+          <div class="skill-icon">
+            <i class="fa-brands fa-laravel" style="color: #ff2d20;" title="Laravel"></i>
+            <i class="fa-brands fa-php" style="color: #777bb4;" title="PHP"></i>
+          </div>
+          <h3>Laravel &amp; PHP</h3>
+          <p>Full-stack web applications on Laravel MVC architecture, Eloquent ORM, RESTful API design, database
+            migrations, and session handling.</p>
           <div class="skill-level"><span style="width: 88%;"></span></div>
         </div>
 
-        <div class="skill-card card-glass" data-cat="digital">
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="backend">
           <div class="skill-icon">
-            <i class="fa-solid fa-file-lines icon-blue"></i>
+            <i class="fa-brands fa-node-js" style="color: #339933;" title="Node.js"></i>
+            <i class="fa-brands fa-npm" style="color: #cb3837;" title="NPM Ecosystem"></i>
           </div>
-          <h3>MS Office Suite</h3>
-          <p>Word document formatting, Excel data analysis &amp; formulas, PowerPoint presentation design, Outlook
-            communication.</p>
-          <div class="skill-level"><span style="width: 94%;"></span></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+            <h3 style="margin-bottom: 0;">Node.js &amp; Express</h3>
+            <span class="tag tag-kw" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">Beginner</span>
+          </div>
+          <p>Developing backend JavaScript runtimes, Express routing, REST endpoints, npm package integration, and
+            powering web utilities like Clip Saver on cloud hosts.</p>
+          <div class="skill-level"><span style="width: 50%;"></span></div>
         </div>
 
-        <div class="skill-card card-glass" data-cat="digital">
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="backend">
           <div class="skill-icon">
-            <i class="fa-solid fa-language icon-green"></i>
+            <i class="fa-solid fa-database" style="color: #00758f;" title="MySQL"></i>
+            <i class="fa-solid fa-server" style="color: var(--emerald-light);" title="Database Server"></i>
           </div>
-          <h3>Technical English &amp; Khmer</h3>
-          <p>Bilingual communication in Khmer (Native) and English (Advanced L10C) for technical docs and client
-            discussion.</p>
+          <h3>MySQL &amp; Relational Databases</h3>
+          <p>Relational database modeling, SQL queries, table indexes, CRUD operations, database seeders, and data
+            integrity safeguards.</p>
+          <div class="skill-level"><span style="width: 85%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="backend">
+          <div class="skill-icon">
+            <i class="fa-solid fa-code" style="color: #00599c;" title="C++ &amp; Data Structures"></i>
+            <i class="fa-brands fa-java" style="color: #e76f00;" title="Java &amp; OOP"></i>
+          </div>
+          <h3>Computer Science Fundamentals</h3>
+          <p>Object-Oriented Programming (OOP), Data Structures &amp; Algorithms, memory concepts, and foundational
+            software engineering principles.</p>
+          <div class="skill-level"><span style="width: 84%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="backend">
+          <div class="skill-icon">
+            <i class="fa-brands fa-git-alt" style="color: #f05032;" title="Git"></i>
+            <i class="fa-brands fa-github" style="color: var(--text);" title="GitHub"></i>
+          </div>
+          <h3>Git &amp; GitHub</h3>
+          <p>Version control with Git, repository workflows, release tagging, and cloud deployment pipelines
+            (`github.com/SixC6C`).</p>
+          <div class="skill-level"><span style="width: 82%;"></span></div>
+        </div>
+
+        <!-- Design & Media -->
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="media">
+          <div class="skill-icon">
+            <i class="fa-brands fa-figma" style="color: #f24e1e;" title="Figma"></i>
+            <i class="fa-solid fa-bezier-curve" style="color: #00c4cc;" title="Vector Prototyping"></i>
+          </div>
+          <h3>Figma UI/UX &amp; Prototyping</h3>
+          <p>Design token systems, clickable high-fidelity wireframes, mobile-first design, component variants, and
+            intuitive user experiences.</p>
           <div class="skill-level"><span style="width: 90%;"></span></div>
+        </div>
+
+        <div class="skill-card card-glass reveal-on-scroll" data-cat="media">
+          <div class="skill-icon">
+            <i class="fa-solid fa-image" style="color: #31a8ff;" title="Adobe Photoshop"></i>
+            <i class="fa-solid fa-video" style="color: var(--slate-amber);" title="CapCut Video Editing"></i>
+          </div>
+          <h3>Adobe Photoshop &amp; CapCut</h3>
+          <p>Graphic assets, banner creation, photo retouching, short-form video editing, audio syncing, and social
+            engagement media.</p>
+          <div class="skill-level"><span style="width: 88%;"></span></div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ===== WORK / PROJECTS SECTION ===== -->
+  <!-- ===== 04 / SELECTED WORK SECTION ===== -->
   <section class="section section-alt" id="work">
     <div class="section-inner">
-      <div class="section-header">
+      <div class="section-header reveal-on-scroll">
         <p class="section-label">04 / SELECTED WORK</p>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-sub">A showcase of web applications, UI designs, and digital tools I've built.</p>
+        <h2 class="section-title">Featured Projects &amp; Creations</h2>
+        <p class="section-sub">A showcase of production web applications, AI tools, and UI design systems.</p>
       </div>
 
       <!-- Project Category Filters -->
-      <div class="project-filter" id="projectFilter">
+      <div class="project-filter reveal-on-scroll" id="projectFilter">
         <button class="p-filter-btn active" data-filter="all">All Projects</button>
-        <button class="p-filter-btn" data-filter="web">Web Apps</button>
+        <button class="p-filter-btn" data-filter="ai">AI &amp; Web Apps</button>
         <button class="p-filter-btn" data-filter="ui">UI/UX Design</button>
-        <button class="p-filter-btn" data-filter="tools">Digital Tools</button>
       </div>
 
       <div class="project-grid" id="projectGrid">
 
-        <!-- Project 1: Khmer AI Voice Studio -->
-        <article class="project-card card-glass" data-project-cat="web">
-          <div class="project-preview preview-gradient-2" style="padding:0;overflow:hidden;">
-            <div class="preview-mockup" style="display:flex;flex-direction:column;padding:0;">
+        <!-- Project 1: Khmer AI Voice Studio (FLAGSHIP) -->
+        <article class="project-card card-glass reveal-on-scroll" data-project-cat="ai">
+          <div class="project-preview">
+            <div class="preview-mockup">
               <div class="mockup-header">
                 <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
                 <span class="mockup-title">text-ivory-eight.vercel.app</span>
               </div>
               <div style="flex:1;overflow:hidden;position:relative;">
-                <img src="images/khmer-voice-studio-preview.jpg" alt="Khmer AI Voice Studio Preview"
-                  style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+                <img src="images/khmer-voice-studio-preview.jpg" alt="Khmer AI Voice Studio Preview">
               </div>
             </div>
           </div>
           <div class="project-body">
             <div class="project-bar">
-              <span class="project-file">khmer_ai_studio / Live Web App</span>
-              <span class="project-badge">AI &amp; Speech Tech</span>
+              <span class="project-file">khmer_ai_studio / Live App</span>
+              <div class="audio-wave-badge" title="Live Neural Audio Engine">
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+              </div>
+              <span class="project-badge project-badge-ai">AI Speech Tech</span>
             </div>
             <h3>Khmer AI Voice Studio</h3>
-            <p>Next-Generation Khmer AI Voice Studio converting Khmer Unicode script into ultra-realistic, expressive, and natural speech. Features real-time audio waveforms, voice personas (Sreymom &amp; Piseth), tuning controls, MP3 export, and API docs.</p>
+            <p>
+              Next-generation Khmer AI Voice Studio converting Khmer Unicode script into ultra-realistic, expressive,
+              and natural speech. Features real-time audio waveforms, voice personas (Sreymom &amp; Piseth), speed and
+              pitch modulators, MP3 exports, and developer API documentation.
+            </p>
             <ul class="tag-list">
               <li class="tag tag-fn">Edge Neural TTS</li>
               <li class="tag tag-kw">JavaScript (ES6+)</li>
@@ -570,76 +633,125 @@
               <li class="tag tag-num">HTML5 Canvas</li>
             </ul>
             <div class="project-links">
-              <button type="button" class="btn-link open-modal-btn" data-project-id="khmer_tts">Project Details →</button>
-              <a href="https://text-ivory-eight.vercel.app" target="_blank" rel="noopener" class="btn-link" style="color: var(--accent-green); font-weight: 600;">
+              <button type="button" class="btn-link open-modal-btn" data-project-id="khmer_tts">Project Details
+                →</button>
+              <a href="https://text-ivory-eight.vercel.app" target="_blank" rel="noopener"
+                class="btn btn-primary btn-sm">
                 Live Demo ↗
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Project 2: Final Exam UI Design (Figma) -->
-        <article class="project-card card-glass" data-project-cat="ui">
-          <div class="project-preview preview-gradient-5" style="padding:0;overflow:hidden;">
-            <div class="preview-mockup" style="display:flex;flex-direction:column;padding:0;">
+        <!-- Project 2: Clip Saver - TikTok & Instagram Reels Video Downloader -->
+        <article class="project-card card-glass reveal-on-scroll" data-project-cat="ai">
+          <div class="project-preview">
+            <div class="preview-mockup">
               <div class="mockup-header">
                 <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-                <span class="mockup-title">figma.com / Final_exam</span>
+                <span class="mockup-title">downloadvideo-production-a6e0.up.railway.app</span>
               </div>
-              <div style="flex:1;overflow:hidden;">
-                <img src="images/final-exam-preview.png" alt="Final Exam UI Design Preview"
-                  style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              <div style="flex:1;overflow:hidden;position:relative;">
+                <img src="images/clip-saver-preview.jpg"
+                  alt="Clip Saver — TikTok &amp; Instagram Reels Video Downloader Preview">
               </div>
             </div>
           </div>
           <div class="project-body">
             <div class="project-bar">
-              <span class="project-file">Final_exam / Figma Design</span>
+              <span class="project-file">clip_saver / Live Web App</span>
+              <span class="project-badge project-badge-ai">Media &amp; Cloud</span>
+            </div>
+            <h3>Clip Saver – Video Downloader</h3>
+            <p>
+              High-performance social video downloader web application for TikTok and Instagram Reels. Supports
+              watermark-free HD downloads, audio extraction, link auto-detection, and fast cloud processing on Railway.
+            </p>
+            <ul class="tag-list">
+              <li class="tag tag-fn">Node.js / Express</li>
+              <li class="tag tag-kw">Railway Cloud</li>
+              <li class="tag tag-str">Media Parsing API</li>
+              <li class="tag tag-num">Glassmorphism UI</li>
+            </ul>
+            <div class="project-links">
+              <button type="button" class="btn-link open-modal-btn" data-project-id="clip_saver">Project Details
+                →</button>
+              <a href="https://downloadvideo-production-a6e0.up.railway.app" target="_blank" rel="noopener"
+                class="btn btn-primary btn-sm">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Final Exam UI Design (Figma) -->
+        <article class="project-card card-glass reveal-on-scroll" data-project-cat="ui">
+          <div class="project-preview">
+            <div class="preview-mockup">
+              <div class="mockup-header">
+                <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                <span class="mockup-title">figma.com / Final_exam</span>
+              </div>
+              <div style="flex:1;overflow:hidden;">
+                <img src="images/final-exam-preview.png" alt="Final Exam UI Design Preview">
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-bar">
+              <span class="project-file">Final_exam / Figma</span>
               <span class="project-badge">UI/UX Design</span>
             </div>
-            <h3>Final Exam UI Design</h3>
-            <p>A comprehensive UI/UX design project created in Figma for a final exam submission, featuring polished
-              screen layouts, interactive prototypes, and a cohesive design system.</p>
+            <h3>Final Exam UI Design System</h3>
+            <p>
+              A comprehensive UI/UX design project created in Figma for a university final exam submission, featuring
+              polished screen layouts, interactive clickable prototypes, and a cohesive design token system.
+            </p>
             <ul class="tag-list">
               <li class="tag tag-fn">Figma</li>
               <li class="tag tag-kw">UI/UX Design</li>
-              <li class="tag tag-str">Prototyping</li>
+              <li class="tag tag-str">Design Tokens</li>
             </ul>
             <div class="project-links">
+              <button type="button" class="btn-link open-modal-btn" data-project-id="final_exam">Project Details
+                →</button>
               <a href="https://www.figma.com/design/TUgE8QvwQv4D4mNDe7qiGn/Final_exam?node-id=0-1&t=EBlAhIyPMGd0zx3g-1"
                 target="_blank" rel="noopener" class="btn-link">View in Figma →</a>
             </div>
           </div>
         </article>
 
-        <!-- Project 6: Bus Ticket Booking UI Design (Figma) -->
-        <article class="project-card card-glass" data-project-cat="ui">
-          <div class="project-preview preview-gradient-6" style="padding:0;overflow:hidden;">
-            <div class="preview-mockup" style="display:flex;flex-direction:column;padding:0;">
+        <!-- Project 3: Bus Ticket Booking UI Design (Figma) -->
+        <article class="project-card card-glass reveal-on-scroll" data-project-cat="ui">
+          <div class="project-preview">
+            <div class="preview-mockup">
               <div class="mockup-header">
                 <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
                 <span class="mockup-title">figma.com / bus_ticket_book</span>
               </div>
               <div style="flex:1;overflow:hidden;">
-                <img src="images/bus-ticket-preview.png" alt="Bus Ticket Booking App Preview"
-                  style="width:100%;height: 100%;object-fit:cover;object-position:top;display:block;">
+                <img src="images/bus-ticket-preview.png" alt="Bus Ticket Booking App Preview">
               </div>
             </div>
           </div>
           <div class="project-body">
             <div class="project-bar">
-              <span class="project-file">bus_ticket_book / Figma Design</span>
+              <span class="project-file">bus_ticket_book / Figma</span>
               <span class="project-badge">Mobile UI/UX</span>
             </div>
-            <h3>Bus Ticket Booking App</h3>
-            <p>A mobile-first UI/UX design for a bus ticket booking application built in Figma, featuring seat selection
-              flows, booking confirmation screens, and a clean travel-themed design system.</p>
+            <h3>Bus Ticket Booking Mobile App</h3>
+            <p>
+              A mobile-first UI/UX design for a bus ticket booking application built in Figma, featuring interactive
+              seat selection flows, booking confirmation screens, and a clean travel-themed design system.
+            </p>
             <ul class="tag-list">
               <li class="tag tag-fn">Figma</li>
               <li class="tag tag-kw">Mobile UI/UX</li>
-              <li class="tag tag-str">App Design</li>
+              <li class="tag tag-str">Interactive Prototyping</li>
             </ul>
             <div class="project-links">
+              <button type="button" class="btn-link open-modal-btn" data-project-id="bus_ticket">Project Details
+                →</button>
               <a href="https://www.figma.com/design/K5fR0HRnESrUZs3mxZ4rVq/Assigment_bus_ticket_book?node-id=0-1&t=MA7IrRwgGaWB5z0F-1"
                 target="_blank" rel="noopener" class="btn-link">View in Figma →</a>
             </div>
@@ -650,73 +762,107 @@
     </div>
   </section>
 
-  <!-- ===== INTERACTIVE TERMINAL SECTION ===== -->
-  <section class="section" id="interactive-cli">
+  <!-- ===== 05 / VIBE CONSOLE (INTERACTIVE AI FLOW DECK) ===== -->
+  <section class="section" id="vibe-console">
     <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">COMMAND LINE INTERFACE</p>
-        <h2 class="section-title">Interactive Terminal</h2>
-        <p class="section-sub">Type commands to inspect my background, skills, or trigger special actions directly.</p>
+      <div class="section-header reveal-on-scroll">
+        <p class="section-label">05 / VIBE LAB &amp; PROMPT DECK</p>
+        <h2 class="section-title">Interactive Vibe Studio v4.0</h2>
+        <p class="section-sub">Click a prompt chip or type below to explore my workflow, tech stack, or listen to
+          ambient flow chimes.</p>
       </div>
 
-      <div class="terminal-full card-glass">
-        <div class="terminal-bar">
+      <div class="vibe-console-card card-glass reveal-on-scroll">
+        <div class="vibe-console-bar">
           <div class="window-controls">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
             <span class="dot dot-green"></span>
           </div>
-          <span class="terminal-title">sopanha-shell v1.0 — bash</span>
-          <span class="terminal-help-btn" id="termHelpTrigger">Type 'help' for options</span>
-        </div>
-
-        <div class="terminal-output" id="interactiveTermOutput">
-          <div class="term-line-out">Welcome to Un Sopanha's Interactive Terminal v1.0!</div>
-          <div class="term-line-out text-muted">Type <span class="text-accent">'help'</span> to view available commands.
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+            sopanha-vibe-engine // obsidian-emerald edition
+          </span>
+          <div class="vibe-status-pill">
+            <span class="badge-dot"></span>
+            <span>Flow State Active • 120 FPS</span>
           </div>
         </div>
 
-        <div class="terminal-input-row">
-          <span class="prompt">visitor@sopanha.dev:~$</span>
-          <input type="text" id="termInput" autocomplete="off" spellcheck="false"
-            placeholder="type a command (e.g. 'whoami', 'skills', 'projects', 'help')...">
+        <!-- Quick Prompt Chips -->
+        <div class="vibe-chips-row">
+          <span class="vibe-chips-label">Quick Prompts:</span>
+          <button class="vibe-chip" data-vibe-prompt="stack"><i class="fa-solid fa-bolt"></i> Vibe Stack</button>
+          <button class="vibe-chip" data-vibe-prompt="year4"><i class="fa-solid fa-graduation-cap"></i> Year 4 Senior
+            Goals</button>
+          <button class="vibe-chip" data-vibe-prompt="khmer_ai"><i class="fa-solid fa-microphone-lines"></i> Khmer AI
+            Voice Studio</button>
+          <button class="vibe-chip" data-vibe-prompt="vibecheck"><i class="fa-solid fa-wave-square"></i> Run Vibe
+            Check</button>
+          <button class="vibe-chip" data-vibe-prompt="hire"><i class="fa-solid fa-briefcase"></i> Hire Sopanha</button>
+          <button class="vibe-chip" data-vibe-prompt="chime"><i class="fa-solid fa-music"></i> Play Ambient Flow
+            Chime</button>
+        </div>
+
+        <!-- Console Stream Output -->
+        <div class="vibe-console-body" id="vibeConsoleBody">
+          <div class="vibe-ai-response">
+            <div><strong>✦ Welcome to Sopanha's Interactive Vibe Studio v4.0!</strong></div>
+            <div style="color: var(--text-secondary); margin-top: 0.25rem;">
+              Explore my Year 4 senior journey, AI-augmented engineering workflows, or trigger audio chimes. Click any
+              quick prompt chip above or type in the prompt bar below!
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="vibe-input-bar">
+          <span class="vibe-prompt-symbol">✦</span>
+          <input type="text" id="vibeInput" class="vibe-input" autocomplete="off" spellcheck="false"
+            placeholder="Ask Sopanha's Vibe Assistant (e.g. 'stack', 'year 4', 'projects', 'chime', 'contact')...">
+          <button class="vibe-send-btn" id="vibeSendBtn" aria-label="Send prompt">
+            <span>Send</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
+  <!-- ===== 06 / CONTACT SECTION ===== -->
   <section class="section section-alt" id="contact">
     <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">05 / CONTACT ME</p>
-        <h2 class="section-title">Let's Build Something Together.</h2>
-        <p class="section-sub">Whether you have a web project, freelance inquiry, or just want to say hello — feel free
-          to reach out!</p>
+      <div class="section-header reveal-on-scroll">
+        <p class="section-label">06 / GET IN TOUCH</p>
+        <h2 class="section-title">Let's Build Something Extraordinary.</h2>
+        <p class="section-sub">Whether you have a web application, full-time role, or freelance inquiry — let's connect
+          and vibe.</p>
       </div>
 
       <div class="contact-grid">
         <!-- Contact Form -->
-        <form class="contact-form card-glass" id="contactForm">
+        <form class="contact-form card-glass reveal-on-scroll" id="contactForm">
           <div class="field">
-            <label for="name"><span class="prompt">$</span> set name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name or Company" required>
+            <label for="name">Your Name / Organization</label>
+            <input type="text" id="name" name="name" placeholder="Alex Morgan" required>
           </div>
           <div class="field">
-            <label for="email"><span class="prompt">$</span> set email</label>
-            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="alex@company.com" required>
           </div>
           <div class="field">
-            <label for="subject"><span class="prompt">$</span> set subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Web Development / Inquiry" required>
+            <label for="subject">Project or Inquiry Topic</label>
+            <input type="text" id="subject" name="subject" placeholder="Web Development / AI Integration" required>
           </div>
           <div class="field">
-            <label for="message"><span class="prompt">$</span> set message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..."
-              required></textarea>
+            <label for="message">Message &amp; Project Vision</label>
+            <textarea id="message" name="message" rows="5"
+              placeholder="Tell me about what you want to build together..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">
-            <span>send_message()</span>
+            <span>Send Message ✦</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="22" y1="2" x2="11" y2="13"></line>
               <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -726,17 +872,17 @@
         </form>
 
         <!-- Contact Cards Side -->
-        <div class="contact-side">
+        <div class="contact-side reveal-on-scroll">
           <a href="mailto:panha2288@gmail.com" class="contact-card card-glass">
-            <div class="contact-icon">📧</div>
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="contact-details">
-              <span class="contact-link-label">Email Address</span>
+              <span class="contact-link-label">Direct Email</span>
               <span class="contact-link-value">panha2288@gmail.com</span>
             </div>
           </a>
 
           <a href="tel:+855964615123" class="contact-card card-glass">
-            <div class="contact-icon">📱</div>
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="contact-details">
               <span class="contact-link-label">Phone &amp; Telegram</span>
               <span class="contact-link-value">+855 96 461 5123</span>
@@ -744,7 +890,7 @@
           </a>
 
           <a href="https://github.com/SixC6C" target="_blank" rel="noopener" class="contact-card card-glass">
-            <div class="contact-icon">🐙</div>
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
             <div class="contact-details">
               <span class="contact-link-label">GitHub Profile</span>
               <span class="contact-link-value">github.com/SixC6C</span>
@@ -752,7 +898,7 @@
           </a>
 
           <div class="contact-card card-glass">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div class="contact-details">
               <span class="contact-link-label">Location</span>
               <span class="contact-link-value">Phnom Penh, Cambodia</span>
@@ -760,10 +906,10 @@
           </div>
 
           <a href="CV_Un_Sopanha.pdf" download="CV_Un_Sopanha.pdf" class="contact-card card-glass highlight-card">
-            <div class="contact-icon">📄</div>
+            <div class="contact-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
             <div class="contact-details">
               <span class="contact-link-label">Curriculum Vitae</span>
-              <span class="contact-link-value">Download PDF Resume ↓</span>
+              <span class="contact-link-value">Download Senior CV (PDF) ↓</span>
             </div>
           </a>
         </div>
@@ -776,14 +922,15 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="#top" class="nav-logo">
-          <span class="nav-logo-text">Un Sopanha<span class="text-accent">.dev</span></span>
+          <span class="status-indicator"></span>
+          <span class="nav-logo-text">Un Sopanha<span class="text-accent">.vibe</span></span>
         </a>
-        <p class="footer-sub">Building web apps &amp; digital solutions in Phnom Penh, Cambodia.</p>
+        <p class="footer-sub">Year 4 CS Senior @ Western University • Building with Flow &amp; AI in Phnom Penh.</p>
       </div>
 
       <div class="footer-copy">
         <p>&copy; <span id="year"></span> UN Sopanha. All rights reserved.</p>
-        <p class="tech-note">Built with HTML5, Vanilla CSS3 &amp; ES6 JavaScript.</p>
+        <p class="tech-note">Designed in Minimalist Tech Modern with zero-lag hardware-accelerated animations.</p>
       </div>
 
       <button class="to-top" id="toTop" aria-label="Back to top">
@@ -798,7 +945,64 @@
     <div class="modal-container card-glass">
       <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
       <div class="modal-body" id="modalContent">
-        <!-- Dynamic Modal Content populated by JavaScript -->
+        <!-- Dynamically populated by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING AI COPILOT BUTTON & DRAWER ===== -->
+  <div class="floating-ai-wrapper" id="floatingAiWrapper">
+    <!-- Floating Trigger Button -->
+    <button class="floating-ai-btn" id="floatingAiBtn" aria-label="Ask Sopanha's AI Copilot" title="Ask Sopanha's AI Copilot">
+      <span class="ai-btn-beacon"></span>
+      <span class="ai-btn-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+      <span class="ai-btn-label">Ask AI About Me</span>
+    </button>
+
+    <!-- Floating Chat Widget Drawer -->
+    <div class="floating-ai-widget card-glass" id="floatingAiWidget" aria-hidden="true">
+      <div class="ai-widget-header">
+        <div class="ai-widget-title">
+          <span class="ai-widget-indicator"></span>
+          <div>
+            <strong>Sopanha AI Copilot</strong>
+            <small>Year 4 CS Senior • Ask Me Anything</small>
+          </div>
+        </div>
+        <button class="ai-widget-close" id="aiWidgetClose" aria-label="Close Assistant">&times;</button>
+      </div>
+
+      <div class="ai-widget-body" id="aiWidgetBody">
+        <div class="ai-widget-bubble">
+          <div style="font-weight: 700; color: var(--emerald-light); margin-bottom: 0.25rem;">
+            <i class="fa-solid fa-robot"></i> Hello! How can I help you today?
+          </div>
+          <div>Ask me anything about <strong>Un Sopanha</strong>: his <strong>Year 4 senior thesis</strong>, <strong>Vibe Stack</strong>, <strong>Clip Saver &amp; Khmer Voice AI</strong>, <strong>General English (B2)</strong>, or <strong>how to hire him</strong>.</div>
+        </div>
+      </div>
+
+      <!-- Quick Prompt Chips -->
+      <div class="ai-widget-chips">
+        <button class="ai-chip-btn" data-ai-prompt="who is sopanha">👤 Who is Sopanha?</button>
+        <button class="ai-chip-btn" data-ai-prompt="year 4">🎓 Year 4 Senior</button>
+        <button class="ai-chip-btn" data-ai-prompt="stack">⚡ Tech Stack</button>
+        <button class="ai-chip-btn" data-ai-prompt="clip saver">🚀 Clip Saver</button>
+        <button class="ai-chip-btn" data-ai-prompt="khmer voice ai">🎙️ Voice Studio</button>
+        <button class="ai-chip-btn" data-ai-prompt="english">🗣️ English (B2)</button>
+        <button class="ai-chip-btn" data-ai-prompt="hire">💼 Hire / Contact</button>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="ai-widget-input-bar">
+        <input type="text" id="aiWidgetInput" class="ai-widget-input" placeholder="Type a question about Sopanha..." autocomplete="off">
+        <button class="ai-widget-send-btn" id="aiWidgetSendBtn" aria-label="Send prompt">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+      <!-- Quick Deck Jump -->
+      <div class="ai-widget-footer">
+        <a href="#vibe-console" id="aiWidgetDeckLink">Explore Full Vibe Studio Deck ↗</a>
       </div>
     </div>
   </div>
